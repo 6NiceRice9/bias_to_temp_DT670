@@ -95,7 +95,7 @@ def evaluate(event):
         kelvin = str(round(C_2_12(user_input), 2))
     else:
         print("Error")
-    degree = str(round((float(kelvin) - 298.15), 2))
+    degree = str(round((float(kelvin) - 273.15), 2))
     res.configure(text="Result: " + kelvin + " K or " + degree + " °C")
 
 
