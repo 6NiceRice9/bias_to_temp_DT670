@@ -1,7 +1,9 @@
+# NiceRice
+# git push origin master
 import numpy as np
 from tkinter import *
 
-
+#
 # source https://www.lakeshore.com/docs/default-source/product-downloads/ethernet-firmware-updates/curve_dt670.zip?sfvrsn=bd514207_4
 
 def C_100_500(Z):
@@ -84,7 +86,7 @@ def evaluate(event):
     # res.configure(text = "Result: " + str(C_2_12(float(entry.get()))) + " K")
 
     user_input = float(str(entry.get().replace(",", ".")))  # replace comma to dot
-
+#
     if 0.090681 <= user_input < 1:
         kelvin = str(round(C_100_500(user_input), 2))
     elif 1 <= user_input < 1.125923:
