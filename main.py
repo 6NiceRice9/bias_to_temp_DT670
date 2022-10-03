@@ -73,7 +73,7 @@ def press(num):
     expression = expression + str(num)
 
     # update the expression by using set method
-    equation.set(expression)
+    expression.set(expression)
 
 
 import tkinter as tk
