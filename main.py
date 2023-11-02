@@ -80,7 +80,7 @@ def press(num):
 
 
 import tkinter as tk
-from math import *
+#from math import *
 
 
 def evaluate(event):
@@ -97,13 +97,15 @@ def evaluate(event):
     elif 1.334990 <= user_input <= 1.634720:
         kelvin = str(round(C_2_12(user_input), 2))
     else:
-        print("Error")
+        res.configure(text="out of range")
     degree = str(round((float(kelvin) - 273.15), 2))
-    res.configure(text="Result: " + kelvin + " K or " + degree + " °C")
+    res.configure(text=str(user_input) + "V \u2248 " + kelvin + " K or " + degree + " °C")
 
 
 w = tk.Tk()
-tk.Label(w, text="LakeShore Cryotronics DT-670 Series").pack()
+w.title("LakeShore Cryotronics DT-670 Series")
+w.geometry("360x60")
+tk.Label(w, text="(2K) 1.634720V \u2264 range \u2264 0.090681V (500K)").pack()
 entry = tk.Entry(w)
 entry.bind("<Return>", evaluate)
 entry.pack()
