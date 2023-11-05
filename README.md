@@ -1,4 +1,4 @@
-## Tepeature Diode:
+## Temperature Diode:
 convert Voltage to Kelvin
 
 ### Source:
